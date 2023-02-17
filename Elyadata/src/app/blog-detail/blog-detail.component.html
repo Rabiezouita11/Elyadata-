@@ -1,1 +1,67 @@
-<p>blog-detail works!</p>
+
+
+
+
+
+
+<section>
+    <div class="container-fluid">
+     
+    <br>
+    <br>
+
+    <br>
+    <br>
+    <br>
+      <div class="container">
+     
+        <div class="row">
+       
+     
+  <br>
+  <br>
+          <div class="col-sm-4" >
+  
+            <div    class="card text-center "[ngStyle]="{ 'border-color': blog.upvotes > blog.downvotes ? 'green' : 'red' }"
+              >
+              <div class="title">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                <h2> title :  {{ blog.title }}</h2>
+                <h2> content :  {{ blog.content }}</h2>
+              </div>
+              
+              <div class="option">
+                <ul>
+                  <li> <i class="fa fa-check" aria-hidden="true"></i> <p>By {{ blog.author }}</p> </li>
+  
+                  <li> <i class="fa fa-check" aria-hidden="true"></i> </li>
+                  <li> <i class="fa fa-check" aria-hidden="true"></i> </li>
+                  <p>Upvotes: {{ blog.upvotes }} | Downvotes: {{ blog.downvotes }}</p>
+                  <button class="btn btn-sm btn-success" (click)="upvote()">Upvote</button>
+                  <button class="btn btn-sm btn-danger" (click)="downvote()">Downvote</button>
+                  
+                </ul>
+              </div>
+        
+  
+              <br>
+  
+              
+  
+              <br>
+      
+              
+            </div>
+          </div>
+          <br>
+          <!-- END Col one -->
+  
+          <!-- END Col two -->
+  
+  
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { blogs} from '../models/blog';
 import { BlogService } from '../services/blog-service.service';
 
@@ -10,9 +11,11 @@ import { BlogService } from '../services/blog-service.service';
 })
 export class BlogListComponent implements OnInit {
   blogs: blogs[] = [];
+  searchText: string = '';
   constructor(private blogService: BlogService) { }
 
   ngOnInit() {
+  
     this.getBlogs();
   }
   getBlogs(): void {
@@ -29,7 +32,6 @@ export class BlogListComponent implements OnInit {
   
 
 
-  
   upvote(blog: blogs): void {
     blog.upvotes += 1;
     this.blogService.updateBlog(blog).subscribe(
@@ -39,7 +41,15 @@ export class BlogListComponent implements OnInit {
     );
 
   }
-  
+  downvote(blog: blogs): void {
+    blog.downvotes += 1;
+    this.blogService.updateBlog(blog).subscribe(
+      (response: any) => {
+        console.log(response);
+      }
+    );
+
+  }
 
   
 

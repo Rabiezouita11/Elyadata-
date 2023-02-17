@@ -1,1 +1,28 @@
-<p>blog-form works!</p>
+<h2>Add Blog</h2>
+<form [formGroup]="blogForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" formControlName="title"  class="form-control" id="title" placeholder="Enter title">
+    <div *ngIf="blogForm.get('title')!.invalid && (blogForm.get('title')!.dirty || blogForm.get('title')!.touched)">
+        <small class="form-text text-danger">Title is required</small>
+      </div>
+      
+  </div>
+  <div class="form-group">
+    <label for="content">Content</label>
+    <textarea formControlName="content" class="form-control" id="content" placeholder="Enter content"></textarea>
+    <div *ngIf="blogForm.get('content')!.invalid && (blogForm.get('content')!.dirty || blogForm.get('content')!.touched)">
+        <small class="form-text text-danger">content is required</small>
+      </div>
+      
+  </div>
+  <div class="form-group">
+    <label for="author">Author</label>
+    <input type="text" formControlName="author" class="form-control" id="author" placeholder="Enter author">
+    <div *ngIf="blogForm.get('author')!.invalid && (blogForm.get('author')!.dirty || blogForm.get('author')!.touched)">
+        <small class="form-text text-danger">author is required</small>
+      </div>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!blogForm.valid">Submit</button>
+
+</form>

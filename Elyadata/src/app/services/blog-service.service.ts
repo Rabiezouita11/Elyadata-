@@ -18,7 +18,7 @@ export class BlogService {
     return this.http.get<blogs[]>(this.url+"/blogs");
   }
 
-  getBlogById(id: number): Observable<blogs> {
+  getBlogById(id: string): Observable<blogs> {
     return this.http.get<blogs>(this.url + '/blogs/' + id);
   }
 

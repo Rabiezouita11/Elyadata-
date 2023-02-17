@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { BlogListComponent } from './blog-list/blog-list.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import { BlogFormComponent } from './blog-form/blog-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BlogFilterPipe } from './blog-filter.pipe';
 
 
 @NgModule({
@@ -15,13 +16,15 @@ import { FormsModule } from '@angular/forms';
     BlogListComponent,
     BlogDetailComponent,
     BlogFormComponent,
+    BlogFilterPipe,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule 
+    HttpClientModule,
+    ReactiveFormsModule 
 
     
   ],

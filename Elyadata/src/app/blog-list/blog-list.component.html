@@ -6,10 +6,27 @@
 
 <section>
   <div class="container-fluid">
-    <div class="container">
+    <div class="form-control">
       <div class="row">
- 
-        <div class="col-sm-4"  *ngFor="let blog of blogs">
+     
+      <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="Search blogs...">
+   
+    </div>
+  </div>
+  <br>
+  <br>
+  <button class="btn btn-sm btn-success" routerLink="add-blog" > ajouter blog</button>
+  <br>
+  <br>
+  <br>
+    <div class="container">
+   
+      <div class="row">
+     
+   
+<br>
+<br>
+        <div class="col-sm-4"  *ngFor="let blog of blogs | blogFilter: searchText ">
 
           <div    class="card text-center "[ngStyle]="{ 'border-color': blog.upvotes > blog.downvotes ? 'green' : 'red' }"
             >
@@ -26,8 +43,8 @@
                 <li> <i class="fa fa-check" aria-hidden="true"></i> </li>
                 <li> <i class="fa fa-check" aria-hidden="true"></i> </li>
                 <p>Upvotes: {{ blog.upvotes }} | Downvotes: {{ blog.downvotes }}</p>
-                <button (click)="upvote(blog)">Upvote</button>
-                <!-- <button (click)="downvote(blog)">Downvote</button> -->
+                <button class="btn btn-sm btn-success" (click)="upvote(blog)">Upvote</button>
+                <button class="btn btn-sm btn-danger" (click)="downvote(blog)">Downvote</button>
                 
               </ul>
             </div>
@@ -39,7 +56,7 @@
 
             <br>
     
-            <a class="btn btn-sm btn-success"  [routerLink]="['/blogs', blog._id]">Continue Reading</a>
+            <a class="btn btn-sm btn-info"  [routerLink]="['/blogs', blog._id]">Continue Reading</a>
           </div>
         </div>
         <br>
