@@ -45,8 +45,8 @@ uvicorn main:app --reload
 		<td>MongoDB</td>
 	</tr>
   <tr>
-		<td>Images Storage</td>
-		<td>locale</td>
+		<td></td>
+		<td></td>
 	</tr>
     <tr>
 		<td></td>
