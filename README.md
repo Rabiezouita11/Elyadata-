@@ -32,27 +32,18 @@ uvicorn main:app --reload
 	</tr>
 	<tr>
 		<td>Back-End</td>
-		<td>Express, Node.js</td>
+		<td>FastApi</td>
 	</tr>
-  <tr>
-		<td>Authentication</td>
-		<td>JWT(JSON Web Tokens)</td>
-	</tr>
+
 	<tr>
 		<td>API Testing</td>
 		<td>Postman</td>
 	</tr>
 	<tr>
 		<td>Database</td>
-		<td>Sql</td>
+		<td>MongoDB</td>
 	</tr>
-  <tr>
-		<td>Images Storage</td>
-		<td>locale</td>
-	</tr>
-    <tr>
-		<td>Other APIs Used</td>
-		<td>Stripe Payment,api map , API de géolocalisation , API email </td>
-	</tr>
+
+  
 </tbody>
 </table>
