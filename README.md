@@ -65,8 +65,8 @@ uvicorn main:app --reload
 		<td>Express, Node.js</td>
 	</tr>
   <tr>
-		<td>Authentication</td>
-		<td>JWT(JSON Web Tokens)</td>
+		<td></td>
+		<td></td>
 	</tr>
 	<tr>
 		<td>API Testing</td>
