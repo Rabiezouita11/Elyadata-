@@ -28,7 +28,7 @@ uvicorn main:app --reload
 <tbody>
 	<tr>
 		<td>Front-End</td>
-		<td>Angular, Bootstrap, HTML5, CSS3, Typescript</td>
+		<td>Angular</td>
 	</tr>
 	<tr>
 		<td>Back-End</td>
