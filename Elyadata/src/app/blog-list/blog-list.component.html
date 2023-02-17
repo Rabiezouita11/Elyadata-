@@ -1,0 +1,55 @@
+
+
+
+
+
+
+<section>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+ 
+        <div class="col-sm-4"  *ngFor="let blog of blogs">
+
+          <div    class="card text-center "[ngStyle]="{ 'border-color': blog.upvotes > blog.downvotes ? 'green' : 'red' }"
+            >
+            <div class="title">
+              <i class="fa fa-paper-plane" aria-hidden="true"></i>
+              <h2> title :  {{ blog.title }}</h2>
+              <h2> content :  {{ blog.content }}</h2>
+            </div>
+            
+            <div class="option">
+              <ul>
+                <li> <i class="fa fa-check" aria-hidden="true"></i> <p>By {{ blog.author }}</p> </li>
+
+                <li> <i class="fa fa-check" aria-hidden="true"></i> </li>
+                <li> <i class="fa fa-check" aria-hidden="true"></i> </li>
+                <p>Upvotes: {{ blog.upvotes }} | Downvotes: {{ blog.downvotes }}</p>
+                <button (click)="upvote(blog)">Upvote</button>
+                <!-- <button (click)="downvote(blog)">Downvote</button> -->
+                
+              </ul>
+            </div>
+      
+
+            <br>
+
+            
+
+            <br>
+    
+            <a class="btn btn-sm btn-success"  [routerLink]="['/blogs', blog._id]">Continue Reading</a>
+          </div>
+        </div>
+        <br>
+        <!-- END Col one -->
+
+        <!-- END Col two -->
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
