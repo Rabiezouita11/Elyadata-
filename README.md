@@ -3,6 +3,10 @@
 
 ## Steps for Project Execution :
 
+## to install project in your pc :
+```
+git clone https://github.com/Rabiezouita11/Elyadata-.git
+```
 ##### Client Install
 ```
 cd Elyadata
