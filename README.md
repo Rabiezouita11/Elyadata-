@@ -5,7 +5,7 @@
 
 ## to install project in your pc :
 ```
-git clone https://github.com/Rabiezouita11/Elyadata.git
+git clone https://github.com/Rabiezouita11/Elyadata-.git
 ```
 ##### Client Install
 ```
