@@ -12,7 +12,7 @@ git clone https://github.com/Rabiezouita11/Elyadata-.git
 cd Elyadata
 npm install 
 ng serve 
-http://localhost:4200/
+https://localhost:4200/
 ```
 
 ##### Server Install
@@ -20,7 +20,7 @@ http://localhost:4200/
 cd backend
 pip install fastapi pymongo uvicorn 
 uvicorn main:app --reload 
-http://localhost:8000/blogs
+https://localhost:8000/blogs
 ```
 <table>
 <thead>
